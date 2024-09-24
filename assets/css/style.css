@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ::-webkit-scrollbar{
+    display: none;
+} */
+html{ overflow-x: hidden; }
+/*media query section start*/
+@media only screen and (max-width:426px){
+    .form{
+        padding: 30px 20px !important;
+    }
+    .navbar-logo img{
+        width:220px !important;
+    }
+    .navbar-whatsapp img{
+        width: 150px !important;
+    }
+    marquee{
+        font-size: 13px !important;
+    }
+}
+@media only screen and (max-width:768px){
+    .contact_buttons{
+        margin-top:0px !important;
+    }
+    /* .collapse{
+        background-color: #eee9e9;
+        padding: 0 20px;
+        transition: .6s;
+    } */
+}
+/*media query section End*/
+.navbar-toggler{
+    border: 0;
+    color: #fff !important;
+}
+.navbar-nav .nav-item a{
+    font-size: 18px;
+    font-weight: 600;
+}
+.nav-link .active,.nav-link:hover {
+    color:#d70108 !important;
+}
+.marquee-bg,.bookon-call{
+    background: #d70108!important;
+    color: #fff;
+}
+marquee{
+    color:#fff;
+    margin: 5px 0px;
+}
+.card-body{
+    background-color: #000;
+    padding: 20px 0;
+}
+.card-body .card-title{
+    color: #fff;
+    text-align: center;
+}
+.card-body .card-text{
+    color: #fff;
+    text-align: justify;
+    padding: 10px 20px;
+}
+.card-body .btn{
+    display: flex;
+    justify-content: center;
+    margin: 0 80px;
+}
+.form{
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 10px;
+}
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    left: 20px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+}
+.my-float {
+    margin-top: 16px;
+}
+.call {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff0000;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    /* animation: call 0.6s linear infinite; */
+}
+.my-call {
+    margin-top: 16px;
+}
