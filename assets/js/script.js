@@ -1,28 +1,36 @@
 async function formSubmit(event) {
     event.preventDefault();
+    console.log(event.target);    
+    
     const formData = new FormData(event.target);
-    document.getElementById('loader').style.display = 'flex';
+    document.getElementById('loader2').style.display = 'flex';
 
-    const responseData = await fetch(event.target.action, {
-        method: 'POST',
-        body: formData,
-    })
-    const response =  await responseData.json()
+    try {
+        const response = await axios.post(event.target.action, formData);
+        console.log(response.data);
 
-    if(response.success){
-        document.getElementById('loader').style.display = 'none';
-        event.target.reset();
+        if (response.data.success) {
+            document.getElementById('loader2').style.display = 'none';
+            event.target.reset();
+            Swal.fire({
+                title: "Thank You",
+                text: response.data.message,
+                icon: "success"
+            });
+        } else {
+            Swal.fire({
+                title: "Whoops!",
+                text: response.data.message,
+                icon: "error"
+            });
+        }
+    } catch (error) {
+        console.error(error);
+        document.getElementById('loader2').style.display = 'none';
         Swal.fire({
-            title: "Thank You",
-            text: response.message,
-            icon: "success"
-          });
-    }else{
-        Swal.fire({
-            title: "Whoops!",
-            text: response.message,
+            title: "Error!",
+            text: "An error occurred while submitting the form.",
             icon: "error"
-          });
+        });
     }
-
 }
