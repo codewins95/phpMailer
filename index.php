@@ -113,7 +113,8 @@
     <a href="tel:+919821343163" class="call" target="_blank">
         <i class="fa-solid fa-phone my-call"></i>
     </a>
-
+	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./assets/js/script.js"></script>
 </body>
